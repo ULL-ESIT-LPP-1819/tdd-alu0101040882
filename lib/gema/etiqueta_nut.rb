@@ -15,9 +15,11 @@ attr_reader :nombre, :grasas, :grasas_s, :hidratos, :azucares, :proteinas, :sal,
 		@kcal = @grasas*9 + @grasas_s*9 + @hidratos*4 + @azucares*19 + @proteinas*4 + @sal*6 + @grasas_mon*9 + @grasas_pol*9 +  @polialcoholes*2.4 + @almidon*4 + @fibra*2 + @minerales*2
 
 	end
+	
+	def to_s()
+"Nombre:#{@nombre}\nGrasas:#{@grasas}\nGrasas Saturadas:#{@grasas_s}\nHidratos:#{@hidratos}\nAzúcares:#{@azucares}\nNombre:#{@proteinas}\nSal:#{@sal}\nGrasas Monoinsaturasas:#{@grasas_mon}\nGrasas Polisaturadas:#{@grasas_pol}\nPolialcoholes:#{@polialcoholes}\nAlmidon:#{@almidon}\nFibra:#{@fibra}\nVitaminas:#{@vitaminas}\nMinerales:#{@minerales}\nEnergía (Kj):#{@kj}\nEnergía (Kcal):#{@kcal}\n"	end 
+	end
 
-end
-
-
-@Etiqueta = Etiqueta_nut.new("gofio",10,10,10,10,10,10,10,10,10,10,10,10,10)
-puts @Etiqueta.nombre
+ @Etiqueta = Etiqueta_nut.new("gofio",10,10,10,10,10,10,10,10,10,10,10,10,10)
+@Etiqueta.valor_energetico()
+puts @Etiqueta.to_s()
