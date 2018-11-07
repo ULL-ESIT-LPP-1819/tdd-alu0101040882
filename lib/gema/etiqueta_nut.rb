@@ -26,6 +26,3 @@ attr_reader :kj, :kcal, :nombre, :grasas, :grasas_s, :hidratos, :azucares, :prot
 
 end
 	
- @Etiqueta = Etiqueta_nut.new("Gofio",10,10,10,10,10,10,10,10,10,10,10,10,10)
-@Etiqueta.valor_energetico()
-puts @Etiqueta.to_s_porcentaje()
