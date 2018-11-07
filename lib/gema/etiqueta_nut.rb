@@ -1,6 +1,6 @@
 class Etiqueta_nut
 	
-attr_reader :nombre, :grasas, :grasas_s, :hidratos, :azucares, :proteinas, :sal, :grasas_mon, :grasas_pol, :polialcoholes, :almidon, :fibra, :vitaminas, :minerales
+attr_reader :kj, :kcal, :nombre, :grasas, :grasas_s, :hidratos, :azucares, :proteinas, :sal, :grasas_mon, :grasas_pol, :polialcoholes, :almidon, :fibra, :vitaminas, :minerales
 
 	def initialize(nombre,grasas,grasas_s,hidratos,azucares,proteinas,sal,grasas_mon,grasas_pol,polialcoholes,almidon,fibra,vitaminas,minerales)
 		@nombre,@grasas,@grasas_s,@hidratos,@azucares,@proteinas,@sal,@grasas_mon,@grasas_pol,@polialcoholes,@almidon,@fibra,@vitaminas,@minerales = nombre,grasas,grasas_s,hidratos,azucares,proteinas,sal,grasas_mon,grasas_pol,polialcoholes,almidon,fibra,vitaminas,minerales
@@ -20,6 +20,3 @@ attr_reader :nombre, :grasas, :grasas_s, :hidratos, :azucares, :proteinas, :sal,
 "Nombre:#{@nombre}\nGrasas:#{@grasas}\nGrasas Saturadas:#{@grasas_s}\nHidratos:#{@hidratos}\nAzúcares:#{@azucares}\nNombre:#{@proteinas}\nSal:#{@sal}\nGrasas Monoinsaturasas:#{@grasas_mon}\nGrasas Polisaturadas:#{@grasas_pol}\nPolialcoholes:#{@polialcoholes}\nAlmidon:#{@almidon}\nFibra:#{@fibra}\nVitaminas:#{@vitaminas}\nMinerales:#{@minerales}\nEnergía (Kj):#{@kj}\nEnergía (Kcal):#{@kcal}\n"	end 
 	end
 
- @Etiqueta = Etiqueta_nut.new("gofio",10,10,10,10,10,10,10,10,10,10,10,10,10)
-@Etiqueta.valor_energetico()
-puts @Etiqueta.to_s()

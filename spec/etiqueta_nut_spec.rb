@@ -51,9 +51,66 @@ describe " # Existen elementos" do
         it "Existe minerales" do
         expect(@Etiqueta.minerales).not_to eq(nil)
         end
+	end
 
- 
+
+	describe "# Existen metodos" do
+
+        it "Existe metodo valor energetico" do
+	@Etiqueta.valor_energetico()
+        expect(@Etiqueta.kcal).not_to eq(nil)
+        expect(@Etiqueta.kj).not_to eq(nil)
+        end
+
+	it "Existe metodo para salida formateada" do
+	expect(@Etiqueta.to_s).not_to eq(nil)
+	end
+	 it "Existe metodo para obtener nombre" do
+        expect(@Etiqueta.nombre).to eq("Gofio")
+        end
+
+        it "Existe metodo para obtener Grasa" do
+        expect(@Etiqueta.grasas).to eq(10)
+        end
+
+        it "Existe metodo para obtener Grasas Saturadas" do
+        expect(@Etiqueta.grasas_s).to eq(10)
+        end
+
+        it "Existe metodo para obtener hidratos" do
+        expect(@Etiqueta.hidratos).to eq(10)
+        end
+        it "Existe metodo para obtener azucares" do
+        expect(@Etiqueta.azucares).to eq(10)
+        end
+        it "Existe metodo para obtener proteinas" do
+        expect(@Etiqueta.proteinas).to eq(10)
+        end
+        it "Existe metodo para obtener sal" do
+        expect(@Etiqueta.sal).to eq(10)
+        end
+        it "Existe metodo para obtener grasas monoinsaturadas" do
+        expect(@Etiqueta.grasas_mon).to eq(10)
+        end
+        it "Existe metodo para obtener grasas polinsaturadas" do
+        expect(@Etiqueta.grasas_pol).to eq(10)
+        end
+        it "Existe metodo para obtener polialcoholes" do
+        expect(@Etiqueta.polialcoholes).to eq(10)
+        end
+        it "Existe metodo para obtener almidon" do
+        expect(@Etiqueta.almidon).to eq(10)
+        end
+	 it "Existe metodo para obtener fibra" do
+        expect(@Etiqueta.fibra).to eq(10)
+        end
+        it "Existe metodo para obtener vitaminas" do
+        expect(@Etiqueta.vitaminas).to eq(10)
+        end
+        it "Existe metodo para obtener minerales" do
+        expect(@Etiqueta.minerales).to eq(10)
+	end
+	end	
+
 end
 
-
-end
