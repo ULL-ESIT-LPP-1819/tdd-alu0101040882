@@ -62,9 +62,11 @@ describe " # Existen elementos" do
         expect(@Etiqueta.kj).not_to eq(nil)
         end
 
-	it "Existe metodo para salida formateada" do
-	expect(@Etiqueta.to_s).not_to eq(nil)
-	end
+
+	 it "Existe metodo para salida formateada" do
+        expect(@Etiqueta.to_s).not_to eq(nil)
+        end
+
 	 it "Existe metodo para obtener nombre" do
         expect(@Etiqueta.nombre).to eq("Gofio")
         end
