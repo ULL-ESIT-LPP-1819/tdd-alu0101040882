@@ -118,13 +118,13 @@ class Dll
 	def remove(value)
 
 		node = @head
-		while node.value != value do
+		while node.value.sal != value do
 			node = node.next
 		end
 		
-		if node.value != nil
+		if node != nil
 		
-			if node.value != @head.value
+			if node != @head
 				node.prev.next = node.next
 			else
 				@head = node.next
@@ -149,18 +149,18 @@ class Dll
 				
 		while i < sz do
 			aux = @head
-			min = aux.value.sal
+			min = aux.value
 
 			while aux != nil do
-				if aux.value < min
-					min = aux.value.sal
+				if aux.value.sal < min.sal
+					min = aux.value
 				end
 								
 			aux = aux.next					
 			end
 		
 		sorted_dll.insert_tail(min)
-		remove(min)
+		remove(min.sal)
 		i+=1	
 		end
 		
@@ -171,13 +171,3 @@ class Dll
 end
 
 
-@dll = Dll.new()
-@dll.insert_tail(1)
-@dll.insert_tail(2)
-@dll.insert_tail(3)
-
-@dll.print
-
-
-@dll.remove(3)
-@dll.print
