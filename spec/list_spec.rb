@@ -21,7 +21,21 @@ describe " #Metodos básicos" do
 
 	it "Inserta elementos por la cabeza" do
 		expect(Dll.new.insert_head(1)).not_to be == nil
-	end	
+	end
+
+	it "Extrae elementos por la cabeza" do
+		list = Dll.new
+		list.insert_tail(1)
+		list.insert_tail(2)
+		expect(list.head.value).to be == list.extract_head.value
+	end
+	it "Extrae elementos por la cola" do
+                list = Dll.new
+                list.insert_tail(1)
+                list.insert_tail(2)
+                expect(list.tail.value).to be == list.extract_tail.value
+	end
+	
 end
 
 
