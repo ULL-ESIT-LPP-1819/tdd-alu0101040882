@@ -23,6 +23,13 @@ attr_reader :kj, :kcal, :nombre, :grasas, :grasas_s, :hidratos, :azucares, :prot
 	def to_s_porcentaje()
 "Nombre:#{@nombre}\nGrasas:#{@grasas/100.0}\nGrasas Saturadas:#{@grasas_s/100.0}\nHidratos:#{@hidratos/100.0}\nAzúcares:#{@azucares/100.0}\nNombre:#{@proteinas/100.0}\nSal:#{@sal/100.0}\nGrasas Monoinsaturasas:#{@grasas_mon/100.0}\nGrasas Polisaturadas:#{@grasas_pol/100.0}\nPolialcoholes:#{@polialcoholes/100.0}\nAlmidon:#{@almidon/100.0}\nFibra:#{@fibra/100.0}\nVitaminas:#{@vitaminas/100.0}\nMinerales:#{@minerales/100.0}\nEnergía (Kj):#{@kj/100.0}\nEnergía (Kcal):#{@kcal/100.0}\nVALORES DE REFERENCIA:\nValor energético:8.400kJ/ 2000kcal/g\nGrasa total: 70g\nAcidos grasos saturados: 20g\nHidratos de carbono: 260g\nAzúcares: 90g\nProteínas: 50g\nSal: 6g\n"	
 	end	
-
+	
+	def >(other)
+		@sal > other.sal
+	end
+	
+	def <(other)
+		@sal < other.sal
+	end
 end
 	

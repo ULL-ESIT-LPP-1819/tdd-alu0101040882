@@ -9,9 +9,27 @@ RSpec.describe Dll do
 		@dll.insert_tail(Etiqueta_nut.new("Cereales",10,10,10,10,10,8,10,10,10,10,10,10,10))
 	end
 
-describe " # Funciona correctamente" do
+
+describe " #Metodos básicos" do
+	it "Existe constructor" do
+		expect(Dll.new).not_to be == nil
+	end
+	
+	it "Inserta elementos por la cola" do
+		expect(Dll.new.insert_tail(1)).not_to be == nil
+	end
+
+	it "Inserta elementos por la cabeza" do
+		expect(Dll.new.insert_head(1)).not_to be == nil
+	end	
+end
+
+
+
+
+describe " # Clasificacion" do
 	it "Clasifica sal" do
-		@dll.clasify_salt
+		@dll.salt_bubble
 		aux = @dll.head
 
 		while aux.next != nil do

@@ -116,7 +116,7 @@ class Dll
 
 
 	def remove(value)
-
+		
 		node = @head
 		while node.value.sal != value do
 			node = node.next
@@ -163,10 +163,27 @@ class Dll
 		remove(min.sal)
 		i+=1	
 		end
-		
-		@head,@tail,@size=sorted_dll.head,sorted_dll.tail,sorted_dll.size
+
+		return sorted_dll		
 	end
-				
+	
+	def salt_bubble	
+		i = 1
+		
+		while i < @size
+			j = 0
+			aux = @head
+			while j < (@size - i)
+				if aux.value > aux.next.value
+					aux.value, aux.next.value = aux.next.value, aux.value
+				end
+				aux = aux.next
+				j+=1	
+			end	
+			i+=1
+		end		
+		
+	end				
 					
 end
 
