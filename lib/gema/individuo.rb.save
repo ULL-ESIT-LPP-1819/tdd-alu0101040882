@@ -1,0 +1,8 @@
+class Individuo
+		
+	def initialize(nombre,edad,genero)
+		@valoracion=Valores_nut.new(nombre,edad,genero)
+	end
+end
+
+@ind = Individuo.new("Juan",

@@ -1,13 +1,13 @@
 class Individuo
 		
 	def initialize(nombre,edad,genero)
-		@valoracion=Valores_nut.new(nombre,edad,genero)
+		@nombre,@edad,@genero = nombre,edad,genero
 	end
 
 	def to_s
-		"#{@valoracion.nombre},#{@valoracion.edad},#{@valoracion.genero}"
+		"#{@nombre},#{@edad},#{@genero}"
 	end
 end
 
-@ind = Individuo.new("Juan",2,"M")
+@ind = Individuo.new("juan",3,"M")
 puts @ind.to_s
