@@ -1,4 +1,6 @@
 class Paciente_obeso < Paciente
+
+	attr_accessor :imc , :grasa , :rcc
 	
 	def initialize(nombre,edad,genero,peso,talla,sexo,c_cintura,c_cadera)
 		super(nombre,edad,genero)

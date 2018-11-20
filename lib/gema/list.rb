@@ -1,5 +1,5 @@
 class Dll
-	attr_reader :head, :tail, :size
+	attr_accessor :head, :tail, :size
 
 	Node = Struct.new(:value, :next, :prev)
 	
