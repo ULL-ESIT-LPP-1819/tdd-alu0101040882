@@ -46,7 +46,7 @@ RSpec.describe Paciente_obeso do
 		end
 
 		it "El objeto es Paciente_obeso" do
-			expect(@p).is_a? (Paciente_obeso)
+			expect(@p).to be_a_kind_of(Paciente_obeso)
 
 		end		
 		

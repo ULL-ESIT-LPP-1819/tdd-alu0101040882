@@ -7,7 +7,6 @@ RSpec.describe Individuo do
 
 
 
-
         describe " #Pruebas jerarquía" do
 
                 it "La clase es Individuo" do
@@ -15,7 +14,7 @@ RSpec.describe Individuo do
                 end
 
                 it "El objeto es Individuo" do
-                        expect(@p).is_a? (Individuo)
+                        expect(@p).to be_a_kind_of(Individuo)
 
                 end
 
