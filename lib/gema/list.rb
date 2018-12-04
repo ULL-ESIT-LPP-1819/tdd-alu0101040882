@@ -1,4 +1,5 @@
 class Dll
+	include Enumerable
 	attr_accessor :head, :tail, :size
 
 	Node = Struct.new(:value, :next, :prev)
@@ -184,7 +185,18 @@ class Dll
 		end		
 		
 	end				
-					
+		
+	def each
+		aux = @head
+                while aux != nil do
+			yield aux.value
+                        aux = aux.next
+
+                end
+
+	end					
+
+			
 end
 
 

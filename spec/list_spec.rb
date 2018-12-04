@@ -1,3 +1,4 @@
+
 RSpec.describe Dll do
 
 	before :all do
@@ -7,7 +8,17 @@ RSpec.describe Dll do
 		@dll.insert_tail(Etiqueta_nut.new("Agua",    10,10,10,10,10,6,10,10,10,10,10,10,10))
 		@dll.insert_tail(Etiqueta_nut.new("Arroz",   10,10,10,10,10,10,10,10,10,10,10,10,10))
 		@dll.insert_tail(Etiqueta_nut.new("Cereales",10,10,10,10,10,8,10,10,10,10,10,10,10))
+
+
+		@dll2 = Dll.new()
+		@dll2.insert_tail(Valores_nut.new("Juan",10,"M"))
+		@dll2.insert_tail(Valores_nut.new("Pepe",10,"M"))
+		@dll2.insert_tail(Valores_nut.new("Francisco",10,"M"))
+		@dll2.insert_tail(Valores_nut.new("Luis",10,"M"))
+		@dll2.insert_tail(Valores_nut.new("Andrés",10,"M"))
 	end
+
+
 
 
 describe " #Metodos básicos" do
@@ -36,6 +47,7 @@ describe " #Metodos básicos" do
                 expect(list.tail.value).to be == list.extract_tail.value
 	end
 	
+		
 end
 
 
@@ -53,4 +65,76 @@ describe " # Clasificacion" do
 	end
 end
 
+describe " #Enumerable etiqueta nutricional" do
+        it "collect" do
+		expect(@dll2.collect{|x| x.to_s}).not_to eq(nil)
+        end
+	
+	it "select" do
+		expect(@dll2.select{}).not_to eq(nil)
+	end
+	
+	it "max" do
+
+		expect(@dll.max).to eq(Etiqueta_nut.new("Pollo",10,10,10,10,10,6,10,10,10,10,10,10,10))
+
+	end
+
+        it "max" do
+
+		expect(@dll.min).to eq(Etiqueta_nut.new("Agua",10,10,10,10,10,6,10,10,10,10,10,10,10))
+
+        end
+
+
+	it "sort" do
+		sorted_arr = @dll.sort
+		
+		i = 0
+		while(i < sorted_arr.length-1)
+			expect(sorted_arr[i] < sorted_arr[i+1]).to eq (true)
+			i = i + 1
+		end
+	end
 end
+
+describe " #Enumerable valoracion nutricional" do
+        it "collect" do
+                expect(@dll2.collect{|x| x.to_s}).not_to eq(nil)
+        end
+
+        it "select" do
+                expect(@dll2.select{}).not_to eq(nil)
+        end
+
+        it "max" do
+
+		expect(@dll2.max).to eq(Valores_nut.new("Pepe",10,"M"))
+
+        end
+
+        it "max" do
+
+		expect(@dll2.min).to eq(Valores_nut.new("Andrés",10,"M"))
+
+        end
+
+
+
+        it "sort" do
+                sorted_arr = @dll2.sort
+
+                i = 0
+                while(i < sorted_arr.length-1)
+                        expect(sorted_arr[i] < sorted_arr[i+1]).to eq (true)
+                        i = i + 1
+                end
+        end
+
+end
+
+
+
+end
+
+
