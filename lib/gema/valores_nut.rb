@@ -1,5 +1,9 @@
 class Valores_nut
+	include Comparable
+	
+
 	attr_reader :nombre, :edad, :genero
+
 
 	def initialize(nombre,edad,genero)
 		@nombre, @edad, @genero = nombre, edad, genero
@@ -24,6 +28,9 @@ class Valores_nut
 		"Nombre:#{@nombre}\nEdad:#{@edad}\nGenero:#{@genero}\nImc:#{@imc}\n%Grasa:#{@grasa}\nRcc:#{@rcc}"
 	end
 	
+	def <=>(other)
+		@nombre <=> other.nombre
+	end
 end
 
 
