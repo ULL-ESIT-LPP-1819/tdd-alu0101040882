@@ -174,7 +174,7 @@ class Dll
 			j = 0
 			aux = @head
 			while j < (@size - i)
-				if aux.value > aux.next.value
+				if aux.value.sal > aux.next.value.sal
 					aux.value, aux.next.value = aux.next.value, aux.value
 				end
 				aux = aux.next

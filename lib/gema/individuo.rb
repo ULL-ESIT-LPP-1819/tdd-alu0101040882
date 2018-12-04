@@ -7,7 +7,9 @@ class Individuo
 	def to_s
 		"#{@nombre},#{@edad},#{@genero}"
 	end
+
+	def <=>(other)
+		
+	end
 end
 
-@ind = Individuo.new("juan",3,"M")
-puts @ind.to_s

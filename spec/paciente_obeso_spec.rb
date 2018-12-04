@@ -46,7 +46,7 @@ RSpec.describe Paciente_obeso do
 		end
 
 		it "El objeto es Paciente_obeso" do
-			expect(@p).to be_a_kind_of(Paciente_obeso)
+			expect(@p).is_a?(Paciente_obeso)
 
 		end		
 		
@@ -55,6 +55,17 @@ RSpec.describe Paciente_obeso do
                 end
 
 	end
+	
+	describe "#Tipo" do
 
+		it "Responde a to_s" do
+			expect(@p).to respond_to(:to_s)
+		end
+		 it "Responde a imc" do
+                        expect(@p).to respond_to(:imc)
+                end
+
+
+	end
 end
 

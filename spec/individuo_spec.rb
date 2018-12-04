@@ -23,7 +23,13 @@ RSpec.describe Individuo do
                 end
 
         end
+	describe "#Tipo" do 
 
+                it "Responde a to_s" do
+                        expect(@p).to respond_to(:to_s)
+                end
+        end
+	
 end
 
 

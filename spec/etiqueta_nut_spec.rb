@@ -2,6 +2,9 @@ RSpec.describe Etiqueta_nut do
 
         before :each do
                 @Etiqueta = Etiqueta_nut.new("Gofio",10,10,10,10,10,10,10,10,10,10,10,10,10)
+                @Etiqueta2 = Etiqueta_nut.new("Pollo",10,10,10,10,10,10,10,10,10,10,10,10,10)
+                @Etiqueta3 = Etiqueta_nut.new("Kiwi",10,10,10,10,10,10,10,10,10,10,10,10,10)
+		
         end
 
 describe " # Existen elementos" do
@@ -114,5 +117,31 @@ describe " # Existen elementos" do
 	end
 	end	
 
+
+	describe "#Comparable" do
+		it "Los dos operadores son iguales" do
+    			expect(@Etiqueta == @Etiqueta).to be(true)
+  		end
+
+  		it "El primer operador es menor que el segundo" do
+    			expect(@Etiqueta < @Etiqueta2).to be(true)
+  		end
+
+  		it "El primer operador es mayor que el segundo" do
+    			expect(@Etiqueta2 > @Etiqueta).to be(true)
+  		end
+		
+	        it "El primer operador es menor o igual que el segundo" do
+                        expect(@Etiqueta <= @Etiqueta2).to be(true)
+                end
+
+                it "El primer operador es mayor o igual que el segundo" do
+                        expect(@Etiqueta2 >= @Etiqueta).to be(true)
+                end
+
+		it "Between" do
+			expect(@Etiqueta3.between?(@Etiqueta, @Etiqueta2)).to be (true)
+		end
+	end
 end
 
