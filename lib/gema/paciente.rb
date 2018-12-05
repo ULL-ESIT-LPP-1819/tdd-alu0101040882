@@ -1,3 +1,5 @@
+
+#Paciente de una consulta
 class Paciente < Individuo
 
 	def initialize(nombre,edad,genero)

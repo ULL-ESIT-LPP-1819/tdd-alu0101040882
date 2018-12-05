@@ -104,7 +104,18 @@
   
 </div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Etiqueta nutricional de un individuo</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
 
 
 
@@ -605,7 +616,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Metodo de comparaciones utilizado para el modulo comparable.</p>
+</div></span>
   
 </li>
 
@@ -653,7 +666,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Añade la porciones y el tamaño a la etiqueta.</p>
+</div></span>
   
 </li>
 
@@ -675,7 +690,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Convierte la etiqueta a una cadena.</p>
+</div></span>
   
 </li>
 
@@ -697,7 +714,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Convierte la etiqueta a una cadena comoun porcentaje.</p>
+</div></span>
   
 </li>
 
@@ -719,7 +738,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Calcula el valor energetico de una etiqueta.</p>
+</div></span>
   
 </li>
 
@@ -757,12 +778,12 @@
       <pre class="lines">
 
 
-7
 8
-9</pre>
+9
+10</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_nombre'>nombre</span><span class='comma'>,</span><span class='id identifier rubyid_grasas'>grasas</span><span class='comma'>,</span><span class='id identifier rubyid_grasas_s'>grasas_s</span><span class='comma'>,</span><span class='id identifier rubyid_hidratos'>hidratos</span><span class='comma'>,</span><span class='id identifier rubyid_azucares'>azucares</span><span class='comma'>,</span><span class='id identifier rubyid_proteinas'>proteinas</span><span class='comma'>,</span><span class='id identifier rubyid_sal'>sal</span><span class='comma'>,</span><span class='id identifier rubyid_grasas_mon'>grasas_mon</span><span class='comma'>,</span><span class='id identifier rubyid_grasas_pol'>grasas_pol</span><span class='comma'>,</span><span class='id identifier rubyid_polialcoholes'>polialcoholes</span><span class='comma'>,</span><span class='id identifier rubyid_almidon'>almidon</span><span class='comma'>,</span><span class='id identifier rubyid_fibra'>fibra</span><span class='comma'>,</span><span class='id identifier rubyid_vitaminas'>vitaminas</span><span class='comma'>,</span><span class='id identifier rubyid_minerales'>minerales</span><span class='rparen'>)</span>
 	<span class='ivar'>@nombre</span><span class='comma'>,</span><span class='ivar'>@grasas</span><span class='comma'>,</span><span class='ivar'>@grasas_s</span><span class='comma'>,</span><span class='ivar'>@hidratos</span><span class='comma'>,</span><span class='ivar'>@azucares</span><span class='comma'>,</span><span class='ivar'>@proteinas</span><span class='comma'>,</span><span class='ivar'>@sal</span><span class='comma'>,</span><span class='ivar'>@grasas_mon</span><span class='comma'>,</span><span class='ivar'>@grasas_pol</span><span class='comma'>,</span><span class='ivar'>@polialcoholes</span><span class='comma'>,</span><span class='ivar'>@almidon</span><span class='comma'>,</span><span class='ivar'>@fibra</span><span class='comma'>,</span><span class='ivar'>@vitaminas</span><span class='comma'>,</span><span class='ivar'>@minerales</span> <span class='op'>=</span> <span class='id identifier rubyid_nombre'>nombre</span><span class='comma'>,</span><span class='id identifier rubyid_grasas'>grasas</span><span class='comma'>,</span><span class='id identifier rubyid_grasas_s'>grasas_s</span><span class='comma'>,</span><span class='id identifier rubyid_hidratos'>hidratos</span><span class='comma'>,</span><span class='id identifier rubyid_azucares'>azucares</span><span class='comma'>,</span><span class='id identifier rubyid_proteinas'>proteinas</span><span class='comma'>,</span><span class='id identifier rubyid_sal'>sal</span><span class='comma'>,</span><span class='id identifier rubyid_grasas_mon'>grasas_mon</span><span class='comma'>,</span><span class='id identifier rubyid_grasas_pol'>grasas_pol</span><span class='comma'>,</span><span class='id identifier rubyid_polialcoholes'>polialcoholes</span><span class='comma'>,</span><span class='id identifier rubyid_almidon'>almidon</span><span class='comma'>,</span><span class='id identifier rubyid_fibra'>fibra</span><span class='comma'>,</span><span class='id identifier rubyid_vitaminas'>vitaminas</span><span class='comma'>,</span><span class='id identifier rubyid_minerales'>minerales</span>
@@ -805,12 +826,12 @@
       <pre class="lines">
 
 
-5
 6
-7</pre>
+7
+8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_almidon'>almidon</span>
   <span class='ivar'>@almidon</span>
@@ -848,12 +869,12 @@
       <pre class="lines">
 
 
-5
 6
-7</pre>
+7
+8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_azucares'>azucares</span>
   <span class='ivar'>@azucares</span>
@@ -891,12 +912,12 @@
       <pre class="lines">
 
 
-5
 6
-7</pre>
+7
+8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fibra'>fibra</span>
   <span class='ivar'>@fibra</span>
@@ -934,12 +955,12 @@
       <pre class="lines">
 
 
-5
 6
-7</pre>
+7
+8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_grasas'>grasas</span>
   <span class='ivar'>@grasas</span>
@@ -977,12 +998,12 @@
       <pre class="lines">
 
 
-5
 6
-7</pre>
+7
+8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_grasas_mon'>grasas_mon</span>
   <span class='ivar'>@grasas_mon</span>
@@ -1020,12 +1041,12 @@
       <pre class="lines">
 
 
-5
 6
-7</pre>
+7
+8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_grasas_pol'>grasas_pol</span>
   <span class='ivar'>@grasas_pol</span>
@@ -1063,12 +1084,12 @@
       <pre class="lines">
 
 
-5
 6
-7</pre>
+7
+8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_grasas_s'>grasas_s</span>
   <span class='ivar'>@grasas_s</span>
@@ -1106,12 +1127,12 @@
       <pre class="lines">
 
 
-5
 6
-7</pre>
+7
+8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_hidratos'>hidratos</span>
   <span class='ivar'>@hidratos</span>
@@ -1149,12 +1170,12 @@
       <pre class="lines">
 
 
-5
 6
-7</pre>
+7
+8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_kcal'>kcal</span>
   <span class='ivar'>@kcal</span>
@@ -1192,12 +1213,12 @@
       <pre class="lines">
 
 
-5
 6
-7</pre>
+7
+8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_kj'>kj</span>
   <span class='ivar'>@kj</span>
@@ -1235,12 +1256,12 @@
       <pre class="lines">
 
 
-5
 6
-7</pre>
+7
+8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_minerales'>minerales</span>
   <span class='ivar'>@minerales</span>
@@ -1278,12 +1299,12 @@
       <pre class="lines">
 
 
-5
 6
-7</pre>
+7
+8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_nombre'>nombre</span>
   <span class='ivar'>@nombre</span>
@@ -1321,12 +1342,12 @@
       <pre class="lines">
 
 
-5
 6
-7</pre>
+7
+8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_polialcoholes'>polialcoholes</span>
   <span class='ivar'>@polialcoholes</span>
@@ -1364,12 +1385,12 @@
       <pre class="lines">
 
 
-5
 6
-7</pre>
+7
+8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_proteinas'>proteinas</span>
   <span class='ivar'>@proteinas</span>
@@ -1407,12 +1428,12 @@
       <pre class="lines">
 
 
-5
 6
-7</pre>
+7
+8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sal'>sal</span>
   <span class='ivar'>@sal</span>
@@ -1450,12 +1471,12 @@
       <pre class="lines">
 
 
-5
 6
-7</pre>
+7
+8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_vitaminas'>vitaminas</span>
   <span class='ivar'>@vitaminas</span>
@@ -1481,18 +1502,29 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Metodo de comparaciones utilizado para el modulo comparable</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-30
-31
-32</pre>
+35
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='op'>&lt;=&gt;</span> <span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
 	<span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_nombre'>nombre</span> <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_nombre'>nombre</span>
@@ -1511,18 +1543,29 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Añade la porciones y el tamaño a la etiqueta</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-11
-12
-13</pre>
+13
+14
+15</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 11</span>
+      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_porciones'>porciones</span><span class='lparen'>(</span><span class='id identifier rubyid_n_porciones'>n_porciones</span><span class='comma'>,</span><span class='id identifier rubyid_tamaño'>tamaño</span><span class='rparen'>)</span>
 	<span class='ivar'>@n_porciones</span><span class='comma'>,</span><span class='ivar'>@tamaño</span> <span class='op'>=</span> <span class='id identifier rubyid_n_porciones'>n_porciones</span><span class='comma'>,</span><span class='id identifier rubyid_tamaño'>tamaño</span>
@@ -1541,18 +1584,29 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Convierte la etiqueta a una cadena</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-21
-22
-23</pre>
+25
+26
+27</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span><span class='lparen'>(</span><span class='rparen'>)</span>
 <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Nombre:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@nombre</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nGrasas:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@grasas</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nGrasas Saturadas:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@grasas_s</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nHidratos:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@hidratos</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nAzúcares:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@azucares</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nNombre:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@proteinas</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nSal:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@sal</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nGrasas Monoinsaturasas:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@grasas_mon</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nGrasas Polisaturadas:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@grasas_pol</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nPolialcoholes:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@polialcoholes</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nAlmidon:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@almidon</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nFibra:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@fibra</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nVitaminas:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@vitaminas</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nMinerales:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@minerales</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nEnergía (Kj):</span><span class='embexpr_beg'>#{</span><span class='ivar'>@kj</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nEnergía (Kcal):</span><span class='embexpr_beg'>#{</span><span class='ivar'>@kcal</span><span class='embexpr_end'>}</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>	
@@ -1571,18 +1625,29 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Convierte la etiqueta a una cadena comoun porcentaje</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-25
-26
-27</pre>
+30
+31
+32</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 30</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s_porcentaje'>to_s_porcentaje</span><span class='lparen'>(</span><span class='rparen'>)</span>
 <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Nombre:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@nombre</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nGrasas:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@grasas</span><span class='op'>/</span><span class='float'>100.0</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nGrasas Saturadas:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@grasas_s</span><span class='op'>/</span><span class='float'>100.0</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nHidratos:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@hidratos</span><span class='op'>/</span><span class='float'>100.0</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nAzúcares:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@azucares</span><span class='op'>/</span><span class='float'>100.0</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nNombre:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@proteinas</span><span class='op'>/</span><span class='float'>100.0</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nSal:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@sal</span><span class='op'>/</span><span class='float'>100.0</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nGrasas Monoinsaturasas:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@grasas_mon</span><span class='op'>/</span><span class='float'>100.0</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nGrasas Polisaturadas:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@grasas_pol</span><span class='op'>/</span><span class='float'>100.0</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nPolialcoholes:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@polialcoholes</span><span class='op'>/</span><span class='float'>100.0</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nAlmidon:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@almidon</span><span class='op'>/</span><span class='float'>100.0</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nFibra:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@fibra</span><span class='op'>/</span><span class='float'>100.0</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nVitaminas:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@vitaminas</span><span class='op'>/</span><span class='float'>100.0</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nMinerales:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@minerales</span><span class='op'>/</span><span class='float'>100.0</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nEnergía (Kj):</span><span class='embexpr_beg'>#{</span><span class='ivar'>@kj</span><span class='op'>/</span><span class='float'>100.0</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nEnergía (Kcal):</span><span class='embexpr_beg'>#{</span><span class='ivar'>@kcal</span><span class='op'>/</span><span class='float'>100.0</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nVALORES DE REFERENCIA:\nValor energético:8.400kJ/ 2000kcal/g\nGrasa total: 70g\nAcidos grasos saturados: 20g\nHidratos de carbono: 260g\nAzúcares: 90g\nProteínas: 50g\nSal: 6g\n</span><span class='tstring_end'>&quot;</span></span>	
@@ -1601,20 +1666,31 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Calcula el valor energetico de una etiqueta</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-15
-16
-17
 18
-19</pre>
+19
+20
+21
+22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'lib/gema/etiqueta_nut.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_valor_energetico'>valor_energetico</span><span class='lparen'>(</span><span class='rparen'>)</span>
 	<span class='ivar'>@kj</span> <span class='op'>=</span> <span class='ivar'>@grasas</span><span class='op'>*</span><span class='int'>37</span> <span class='op'>+</span> <span class='ivar'>@grasas_s</span><span class='op'>*</span><span class='int'>37</span> <span class='op'>+</span> <span class='ivar'>@hidratos</span><span class='op'>*</span><span class='int'>17</span> <span class='op'>+</span> <span class='ivar'>@azucares</span><span class='op'>*</span><span class='int'>81</span> <span class='op'>+</span> <span class='ivar'>@proteinas</span><span class='op'>*</span><span class='int'>50</span> <span class='op'>+</span> <span class='ivar'>@sal</span><span class='op'>*</span><span class='int'>25</span> <span class='op'>+</span> <span class='ivar'>@grasas_mon</span><span class='op'>*</span><span class='int'>37</span> <span class='op'>+</span> <span class='ivar'>@grasas_pol</span><span class='op'>*</span><span class='int'>37</span> <span class='op'>+</span>  <span class='ivar'>@polialcoholes</span><span class='op'>*</span><span class='int'>10</span> <span class='op'>+</span> <span class='ivar'>@almidon</span><span class='op'>*</span><span class='int'>17</span> <span class='op'>+</span> <span class='ivar'>@fibra</span> <span class='op'>*</span> <span class='int'>8</span> <span class='op'>+</span> <span class='ivar'>@minerales</span><span class='op'>*</span><span class='int'>5</span>
@@ -1631,7 +1707,7 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Dec  4 21:28:23 2018 by
+  Generated on Wed Dec  5 10:22:32 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.5.1).
 </div>

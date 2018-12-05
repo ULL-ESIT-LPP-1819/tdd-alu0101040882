@@ -4,12 +4,10 @@ class Individuo
 		@nombre,@edad,@genero = nombre,edad,genero
 	end
 
+	#Convierte el individuo en una cadena	
 	def to_s
 		"#{@nombre},#{@edad},#{@genero}"
 	end
 
-	def <=>(other)
-		
-	end
 end
 

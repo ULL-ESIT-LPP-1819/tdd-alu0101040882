@@ -1,3 +1,4 @@
+#Paciente de una consulta con tratamiento para la obesidad
 class Paciente_obeso < Paciente
 
 	attr_accessor :imc , :grasa , :rcc
@@ -10,7 +11,8 @@ class Paciente_obeso < Paciente
 		@rcc   = @valoracion.rcc(c_cintura,c_cadera)
 
 	end
-
+	
+	#Convierte el Paciente_obeso en una cadena
 	def to_s
 		@valoracion.to_s
 	end

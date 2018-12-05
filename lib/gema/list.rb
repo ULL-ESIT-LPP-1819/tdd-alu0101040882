@@ -1,3 +1,4 @@
+#Lista doblemente enlazada
 class Dll
 	include Enumerable
 	attr_accessor :head, :tail, :size
@@ -10,12 +11,12 @@ class Dll
 		@size = 0
 	end
 	
-
+	#Comprueba si la lista esta vacía
 	def empty
 		@size == 0
 	end
 		
-		
+	#Inserta por la cabeza
 	def insert_head(value)
 
 		if empty()
@@ -30,6 +31,7 @@ class Dll
 			
 	end
 
+	#Inserta por la cola
 	def insert_tail(value)
 
 		if empty()
@@ -43,6 +45,8 @@ class Dll
 		@size = @size + 1
 			
 	end
+
+	#Extrae por la cabeza
 	def extract_head
 
 		aux = @head
@@ -61,6 +65,8 @@ class Dll
 		return aux
 	end
 
+
+	#Extrae por la cola
 	def extract_tail
 
 		aux = @tail
@@ -79,6 +85,7 @@ class Dll
 		return aux
 	end
 
+	#Imprime la lista
 	def print
 		aux = @head
 		
@@ -88,6 +95,7 @@ class Dll
 		end
 	end
 
+	#Imprime la lista a la inversa
 	def reverse_print
 		aux = @tail
 		
@@ -97,6 +105,7 @@ class Dll
 		end
 	end
 
+	#Obtiene el elemento en la posicion n
 	def get(n)
 		i = 0
 		aux = @head
@@ -110,12 +119,7 @@ class Dll
 	end
 
 
-	def swap(a, b)
-		a.value,a.next,a.prev,b.value,b.next,b.prev=b.value,b.next,b.prev,a.value,a.next,a.prev
-	end
-
-
-
+	#Elimina el elemento al que corresponda value
 	def remove(value)
 		
 		node = @head
@@ -142,7 +146,10 @@ class Dll
 				
 	end
 
+
+	#Clasifica usando la sal
 	def clasify_salt
+
 		i = 0
 		sz = @size
 				
@@ -168,6 +175,8 @@ class Dll
 		return sorted_dll		
 	end
 	
+
+	#Clasifica usando la sal con el metodo de la burbuja
 	def salt_bubble	
 		i = 1
 		
@@ -186,6 +195,7 @@ class Dll
 		
 	end				
 		
+	#Metodo each utilizado para poder hacer uso del modulo Enumerable
 	def each
 		aux = @head
                 while aux != nil do
