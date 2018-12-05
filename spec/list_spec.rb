@@ -3,19 +3,19 @@ RSpec.describe Dll do
 
 	before :all do
 		@dll = Dll.new()
-		@dll.insert_tail(Etiqueta_nut.new("Gofio",   10,10,10,10,10,9,10,10,10,10,10,10,10))
-		@dll.insert_tail(Etiqueta_nut.new("Pollo",   10,10,10,10,10,7,10,10,10,10,10,10,10))
-		@dll.insert_tail(Etiqueta_nut.new("Agua",    10,10,10,10,10,6,10,10,10,10,10,10,10))
-		@dll.insert_tail(Etiqueta_nut.new("Arroz",   10,10,10,10,10,10,10,10,10,10,10,10,10))
-		@dll.insert_tail(Etiqueta_nut.new("Cereales",10,10,10,10,10,8,10,10,10,10,10,10,10))
+		@dll.insert_tail(@gofio=Etiqueta_nut.new("Gofio",   10,10,10,10,10,9,10,10,10,10,10,10,10))
+		@dll.insert_tail(@pollo=Etiqueta_nut.new("Pollo",   10,10,10,10,10,7,10,10,10,10,10,10,10))
+		@dll.insert_tail(@agua=Etiqueta_nut.new("Agua",    10,10,10,10,10,6,10,10,10,10,10,10,10))
+		@dll.insert_tail(@arroz=Etiqueta_nut.new("Arroz",   10,10,10,10,10,10,10,10,10,10,10,10,10))
+		@dll.insert_tail(@cereales=Etiqueta_nut.new("Cereales",10,10,10,10,10,8,10,10,10,10,10,10,10))
 
 
 		@dll2 = Dll.new()
-		@dll2.insert_tail(Valores_nut.new("Juan",10,"M"))
-		@dll2.insert_tail(Valores_nut.new("Pepe",10,"M"))
-		@dll2.insert_tail(Valores_nut.new("Francisco",10,"M"))
-		@dll2.insert_tail(Valores_nut.new("Luis",10,"M"))
-		@dll2.insert_tail(Valores_nut.new("Andrés",10,"M"))
+		@dll2.insert_tail(@juan =Valores_nut.new(@juan ="Juan",10,"M"))
+		@dll2.insert_tail(@pepe=Valores_nut.new(@pepe="Pepe",10,"M"))
+		@dll2.insert_tail(@francisco=Valores_nut.new(@francisco="Francisco",10,"M"))
+		@dll2.insert_tail(@luis=Valores_nut.new(@luis="Luis",10,"M"))
+		@dll2.insert_tail(@andres=Valores_nut.new(@andres="Andrés",10,"M"))
 	end
 
 
@@ -67,22 +67,22 @@ end
 
 describe " #Enumerable etiqueta nutricional" do
         it "collect" do
-		expect(@dll2.collect{|x| x.to_s}).not_to eq(nil)
+		expect(@dll.collect{|x| x.to_s}).not_to eq(nil)
         end
 	
 	it "select" do
-		expect(@dll2.select{}).not_to eq(nil)
+		expect(@dll.select{|x| x == @pollo }) == @pollo
 	end
 	
 	it "max" do
 
-		expect(@dll.max).to eq(Etiqueta_nut.new("Pollo",10,10,10,10,10,6,10,10,10,10,10,10,10))
+		expect(@dll.max).to eq(@pollo)
 
 	end
 
         it "max" do
 
-		expect(@dll.min).to eq(Etiqueta_nut.new("Agua",10,10,10,10,10,6,10,10,10,10,10,10,10))
+		expect(@dll.min).to eq(@agua)
 
         end
 
@@ -104,18 +104,18 @@ describe " #Enumerable valoracion nutricional" do
         end
 
         it "select" do
-                expect(@dll2.select{}).not_to eq(nil)
+                expect(@dll2.select{|x| x== @juan}) == @juan
         end
 
         it "max" do
 
-		expect(@dll2.max).to eq(Valores_nut.new("Pepe",10,"M"))
+		expect(@dll2.max).to eq(@pepe)
 
         end
 
         it "max" do
 
-		expect(@dll2.min).to eq(Valores_nut.new("Andrés",10,"M"))
+		expect(@dll2.min).to eq(@andres)
 
         end
 
@@ -130,7 +130,6 @@ describe " #Enumerable valoracion nutricional" do
                         i = i + 1
                 end
         end
-
 end
 
 
