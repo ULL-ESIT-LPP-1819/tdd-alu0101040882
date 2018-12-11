@@ -26,7 +26,7 @@ class Valores_nut
 		@rcc = (c_cintura/c_cadera)	
 	end
 
-
+	#Convierte la valoracion nutricional a una cadena
 	def to_s
 		"Nombre:#{@nombre}\nEdad:#{@edad}\nGenero:#{@genero}\nImc:#{@imc}\n%Grasa:#{@grasa}\nRcc:#{@rcc}"
 	end

@@ -1,3 +1,4 @@
+#Individuo
 class Individuo
 		
 	def initialize(nombre,edad,genero)

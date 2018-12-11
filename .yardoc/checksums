@@ -1,8 +1,8 @@
 lib/gema.rb 9f1267c879a198a40ffd57121555cb2b7feea02c
 lib/gema/list.rb 8b1e2aa48357eb309a2ab2f5e6edaab4e34e6621
-lib/gema/version.rb 0bce7a2fabb2e142de7f78e4a4198e60ff8d4235
+lib/gema/version.rb 8158525e5d1c7f3c4f409498cff2a00acf63f5ac
 lib/gema/paciente.rb 907bc168783f6fd7d1f64d301537af0acd8651e0
-lib/gema/individuo.rb 27d943cde05521ef97644c63b6613c7bdf0d4c3c
-lib/gema/valores_nut.rb 0b601f775e33450bab0983a3f6213655a552842a
+lib/gema/individuo.rb 021dcc9825c4aaf548924f02931f245c8372b3bf
+lib/gema/valores_nut.rb a008248776340030222a04f8a506304997cbd43d
 lib/gema/etiqueta_nut.rb 90c713d09597848e666a179a8bab3d9d5ed9616e
 lib/gema/paciente_obeso.rb 9be419b16207299d4109c1c982b37cb02c8349a2

@@ -67,5 +67,35 @@ RSpec.describe Paciente_obeso do
 
 
 	end
+
+	describe "#Datos para menú" do
+		it "Peso teorico ideal" do
+			expect(@p.peso_teorico_ideal).to eq(50.1575)
+		end
+
+	        it "Gasto energetico basal" do
+                        expect(@p.gasto_energetico_basal).to eq(394.6875)
+                end
+
+		it "Efecto  termogeno" do
+			expect(@p.efecto_termogeno).to eq(39.46875)
+		end
+
+		it "Factor de actividad fisica" do
+			expect(@p.factor_actividad_fisica("Reposo")).to eq(0.0)
+		end
+		
+		it "Gasto actividad fisica" do
+			expect(@p.gasto_actividad_fisica).to eq(0)
+
+		end
+
+		it "Gasto energetico total" do
+			expect(@p.gasto_energetico_total).to eq(434.15625)
+
+		end
+
+	end
+
 end
 
