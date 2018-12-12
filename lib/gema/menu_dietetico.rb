@@ -11,8 +11,6 @@ class Menu_dietetico
 
 	def verificacion_menu
 
-
-
 		if(@alimentos.map{|x| x.valor_energetico}.inject(0){|sum,x| sum + x}.between?(@persona.gasto_energetico_total_-0.1*@persona.gasto_energetico_total_,@persona.gasto_energetico_total_+0.1*@persona.gasto_energetico_total_))
 			return true
 		else
