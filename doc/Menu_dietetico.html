@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Menu_dietetico
+  
+    &mdash; Documentation by YARD 0.9.16
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Menu_dietetico";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (M)</a> &raquo;
+    
+    
+    <span class="title">Menu_dietetico</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Menu_dietetico
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Menu_dietetico</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/gema/menu_dietetico.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Clase para el calculo de el menu dietetico de una persona</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#a%C3%B1adir_alimento-instance_method" title="#añadir_alimento (instance method)">#<strong>añadir_alimento</strong>(alimento)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Añade alimentos al menu.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(persona)  &#x21d2; Menu_dietetico </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Menu_dietetico.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_s-instance_method" title="#to_s (instance method)">#<strong>to_s</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Covierte el menu a una cadena.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#verificacion_menu-instance_method" title="#verificacion_menu (instance method)">#<strong>verificacion_menu</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Verfica que el menu cumpla con las necesidades energeticas de la persona.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(persona)  &#x21d2; <tt><span class='object_link'><a href="" title="Menu_dietetico (class)">Menu_dietetico</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of Menu_dietetico</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4
+5
+6
+7</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gema/menu_dietetico.rb', line 4</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_persona'>persona</span><span class='rparen'>)</span>
+	<span class='ivar'>@persona</span> <span class='op'>=</span> <span class='id identifier rubyid_persona'>persona</span>
+	<span class='ivar'>@alimentos</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Dll.html" title="Dll (class)">Dll</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Dll.html#initialize-instance_method" title="Dll#initialize (method)">new</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="añadir_alimento-instance_method">
+  
+    #<strong>añadir_alimento</strong>(alimento)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Añade alimentos al menu</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gema/menu_dietetico.rb', line 10</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_añadir_alimento'>añadir_alimento</span><span class='lparen'>(</span><span class='id identifier rubyid_alimento'>alimento</span><span class='rparen'>)</span>
+	<span class='ivar'>@alimentos</span><span class='period'>.</span><span class='id identifier rubyid_insert_tail'>insert_tail</span><span class='lparen'>(</span><span class='id identifier rubyid_alimento'>alimento</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_s-instance_method">
+  
+    #<strong>to_s</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Covierte el menu a una cadena</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+27
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gema/menu_dietetico.rb', line 27</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
+
+	<span class='ivar'>@alimentos</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="verificacion_menu-instance_method">
+  
+    #<strong>verificacion_menu</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Verfica que el menu cumpla con las necesidades energeticas de la persona</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gema/menu_dietetico.rb', line 15</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_verificacion_menu'>verificacion_menu</span>
+
+	<span class='kw'>if</span><span class='lparen'>(</span><span class='ivar'>@alimentos</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_x'>x</span><span class='period'>.</span><span class='id identifier rubyid_valor_energetico'>valor_energetico</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_sum'>sum</span><span class='comma'>,</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_sum'>sum</span> <span class='op'>+</span> <span class='id identifier rubyid_x'>x</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_between?'>between?</span><span class='lparen'>(</span><span class='ivar'>@persona</span><span class='period'>.</span><span class='id identifier rubyid_gasto_energetico_total_'>gasto_energetico_total_</span><span class='op'>-</span><span class='float'>0.1</span><span class='op'>*</span><span class='ivar'>@persona</span><span class='period'>.</span><span class='id identifier rubyid_gasto_energetico_total_'>gasto_energetico_total_</span><span class='comma'>,</span><span class='ivar'>@persona</span><span class='period'>.</span><span class='id identifier rubyid_gasto_energetico_total_'>gasto_energetico_total_</span><span class='op'>+</span><span class='float'>0.1</span><span class='op'>*</span><span class='ivar'>@persona</span><span class='period'>.</span><span class='id identifier rubyid_gasto_energetico_total_'>gasto_energetico_total_</span><span class='rparen'>)</span><span class='rparen'>)</span>
+		<span class='kw'>return</span> <span class='kw'>true</span>
+	<span class='kw'>else</span>
+		<span class='kw'>return</span> <span class='kw'>false</span>
+	<span class='kw'>end</span>
+
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Dec 12 10:11:43 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.16 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

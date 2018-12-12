@@ -38,11 +38,13 @@ class Paciente_obeso < Paciente
    		end
         end
 
+
+	#Calcula el efecto termogeno de una persona
         def efecto_termogeno
                 @efecto_termogeno_ = @gasto_energetico_basal_ * 0.10
         end
 
-
+	#Calcula el factor de actividad fisica de una persona
         def factor_actividad_fisica(nivel_actividad)
 
                 case nivel_actividad
@@ -59,10 +61,14 @@ class Paciente_obeso < Paciente
                 end
         end
 
+
+	#calcula el gasto de la actividad fisica de una perosna
         def gasto_actividad_fisica
                 @gasto_actividad_fisica_ = @gasto_energetico_basal_ * @factor_de_actividad_fisica_
         end
 
+
+	#Calcula el gasto energetico total  de una persona
         def gasto_energetico_total
                 @gasto_energetico_total_ = @gasto_energetico_basal_ + @efecto_termogeno_ + @gasto_actividad_fisica_
         end
