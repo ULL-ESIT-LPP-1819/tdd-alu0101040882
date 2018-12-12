@@ -11,16 +11,17 @@ class Menu_dietetico
 		@alimentos.insert_tail(alimento)
 	end
 
-	#Verfica que el menu cumpla con las necesidades energeticas de la persona
+	#Verifica que el menu cumpla con las necesidades energeticas de la persona
 	def verificacion_menu
 
-		if(@alimentos.map{|x| x.valor_energetico}.inject(0){|sum,x| sum + x}.between?(@persona.gasto_energetico_total_-0.1*@persona.gasto_energetico_total_,@persona.gasto_energetico_total_+0.1*@persona.gasto_energetico_total_))
-			return true
-		else
-			return false
-		end
+                if(@alimentos.map{|x| x.valor_energetico}.reduce(:+).between?(@persona.gasto_energetico_total_-0.1*@persona.gasto_energetico_total_,@persona.gasto_energetico_total_+0.1*@persona.gasto_energetico_total_))
+                        return true
+                else
+                        return false
+                end
 
-	end
+        end
+
 
 	
 	#Covierte el menu a una cadena

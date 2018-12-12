@@ -112,6 +112,7 @@ RSpec.describe Menu_dietetico do
 	end	
 
 	describe " #Verificar menu" do
+
         	it "Se verifican los menus correctamente" do
                 	expect(@menus.collect{|m| m.verificacion_menu}).to be == [true,false,false,true,true]
         	end
