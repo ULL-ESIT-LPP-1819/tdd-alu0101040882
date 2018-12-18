@@ -1,4 +1,3 @@
-
 RSpec.describe Paciente_obeso do
 
 	before :all do
@@ -183,32 +182,12 @@ RSpec.describe Paciente_obeso do
                                 end
                         end
 			
-			result = dll_copy.map{|x| x}
+			result = dll_copy.map
 			
-			expect(result).to eq ( @dll2.map{|x| x}.sort{ |a, b| a.gasto_energetico_total <=> b.gasto_energetico_total})
+			
+			for i 0
+			expect(result).to be ==( @dll2.collect{|x| x }.sort{ |a , b | a.gasto_energetico_total <=> b.gasto_energetico_total })
 		end
-
-                it "Con each" do
-                        
-			
-			dll_copy = @dll2.map{|x| x}
-
-                        dll_copy.each do |a|
-                                dll_copy.each_slice(2)  do |x , y| 
-                                        if x.gasto_energetico_total > y.gasto_energetico_total
-                                                x , y = y , x
-                                        end
-                                end
-                        end
-
-
-                        result = dll_copy.map{|x| x}
-
-                        expect(result).to eq ( @dll2.map{|x| x}.sort{ |a, b| a.gasto_energetico_total <=> b.gasto_energetico_total})
-
-                end
-	
 	end
-
-
 end
+
