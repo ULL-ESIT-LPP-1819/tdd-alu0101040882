@@ -175,19 +175,21 @@ RSpec.describe Menu_dietetico do
 
 
 
-                        for i in 1..arr_copy.size
-                                for j in 0..arr_copy.size-1-i
+                        for i in 1..@a.size
+                                aux = dll_copy.head
+                                for j in i..dll_copy.size-1
 
-                                        if arr_copy[i].valor_energetico > arr_copy[j].valor_energetico
-						arr_copy[i], arr_copy[j] = arr_copy[j], arr_copy[i]
+                                        if aux.value.gasto_energetico_total > aux.next.value.gasto_energetico_total
+                                                aux.value, aux.next.value = aux.next.value, aux.value
                                         end
+                                        aux = aux.next
 
                                 end
                         end
 
-                        result = arr_copy
+                        result = dll_copy.map{|x| x}
 
-                        expect(result).to eq ( @arr_menus.sort{ |a, b| a.valor_energetico <=> b.valor_energetico})
+                        expect(result).to eq ( @dll2.map{|x| x}.sort{ |a, b| a.gasto_energetico_total <=> b.gasto_energetico_total})
                 end
 
 
@@ -196,12 +198,12 @@ RSpec.describe Menu_dietetico do
 
 
 
-                        arr_copy = @arr_menus.dup
+                        dll_copy = @dll2.map{|x| x}
 
-                        arr_copy.each_index{ |x| arr_copy.each_index{ |y| arr_copy[x],dll_copy[y] = arr_copy[y],dll_copy[x] if arr_copy[x].valor_energetico < arr_copy[y].valor_energetico}}
+                        dll_copy.each_index{   |x| dll_copy.each_index{ |y| dll_copy[x],dll_copy[y] = dll_copy[y],dll_copy[x] if dll_copy[x].gasto_energetico_total < dll_copy[y].gasto_energetico_total}}
 
-                        result = arr_copy
-                        expect(result).to eq ( @arr_menus.sort{ |a, b| a.valor_energetico <=> b.valor_energetico})
+                        result = dll_copy
+                        expect(result).to eq ( @dll2.map{|x| x}.sort{ |a, b| a.gasto_energetico_total <=> b.gasto_energetico_total})
 
                 end
 
@@ -210,10 +212,10 @@ RSpec.describe Menu_dietetico do
                 it "Con sort" do
 
 
-                        result = @arr_menus.map{|x| x}.sort{ |a, b| a.valor_energetico <=> b.valor_energetico}
+                        result = @dll2.map{|x| x}.sort{ |a, b| a.gasto_energetico_total <=> b.gasto_energetico_total}
 
                         for i in 0..result.size-2
-                                expect(result[i].valor_energetico).to be <= (result[i+1].valor_energetico)
+                                expect(result[i].gasto_energetico_total).to be <= (result[i+1].gasto_energetico_total)
                         end
 
                 end

@@ -12,6 +12,10 @@ class Menu_dietetico
 	end
 
 
+	def valor_energetico
+		@alimentos.map{|x| x.valor_energetico}.reduce(:+)
+	end
+
 	#Verifica que el menu cumpla con las necesidades energeticas de la persona
 	def verificacion_menu
 

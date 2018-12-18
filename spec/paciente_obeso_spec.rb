@@ -210,7 +210,6 @@ RSpec.describe Paciente_obeso do
 	        it "Con sort" do
 
 
-
                         result = @dll2.map{|x| x}.sort{ |a, b| a.gasto_energetico_total <=> b.gasto_energetico_total}
 
 			for i in 0..result.size-2
