@@ -166,44 +166,41 @@ RSpec.describe Paciente_obeso do
 	
 	describe "#Ordenaciones de la lista" do
 
-		it "Con bucle for" do
-			dll_copy = @dll2
-			
 
-			
-			for i in 1..dll_copy.size
+
+		it "Con bucle for" do
+                        dll_copy = @dll2.dup
+
+
+
+                        for i in 1..dll_copy.size
                                 aux = dll_copy.head
-				for j in i..dll_copy.size-1
-                                
-				        if aux.value.gasto_energetico_total > aux.next.value.gasto_energetico_total
+                                for j in i..dll_copy.size-1
+
+                                        if aux.value.gasto_energetico_total > aux.next.value.gasto_energetico_total
                                                 aux.value, aux.next.value = aux.next.value, aux.value
                                         end
                                         aux = aux.next
-				
+
                                 end
                         end
-			
-			result = dll_copy.map{|x| x}
-			
-			expect(result).to eq ( @dll2.map{|x| x}.sort{ |a, b| a.gasto_energetico_total <=> b.gasto_energetico_total})
-		end
-
-                it "Con each" do
-                        
-			
-			dll_copy = @dll2.map{|x| x}
-
-                        dll_copy.each do |a|
-                                dll_copy.each_slice(2)  do |x , y| 
-                                        if x.gasto_energetico_total > y.gasto_energetico_total
-                                                x , y = y , x
-                                        end
-                                end
-                        end
-
 
                         result = dll_copy.map{|x| x}
 
+                        expect(result).to eq ( @dll2.map{|x| x}.sort{ |a, b| a.gasto_energetico_total <=> b.gasto_energetico_total})
+                end
+
+
+			
+                it "Con each" do
+
+			                        
+			
+			dll_copy = @dll2.map{|x| x}
+
+                        dll_copy.each_index{   |x| dll_copy.each_index{ |y| dll_copy[x],dll_copy[y] = dll_copy[y],dll_copy[x] if dll_copy[x].gasto_energetico_total < dll_copy[y].gasto_energetico_total}}
+
+			result = dll_copy
                         expect(result).to eq ( @dll2.map{|x| x}.sort{ |a, b| a.gasto_energetico_total <=> b.gasto_energetico_total})
 
                 end
