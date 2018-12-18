@@ -6,7 +6,7 @@ require "gema/individuo.rb"
 require "gema/paciente.rb"
 require "gema/paciente_obeso.rb"
 require "gema/menu_dietetico.rb"
-
+require 'benchmark'
 
 module Gema
   # Your code goes here...

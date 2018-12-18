@@ -166,10 +166,14 @@ RSpec.describe Paciente_obeso do
 	
 	describe "#Ordenaciones de la lista" do
 
+	Benchmark.bm do |x|
 
 
 		it "Con bucle for" do
-                        dll_copy = @dll2.dup
+           
+
+		     x.report("for dll"){	
+	             dll_copy = @dll2.dup
 
 
 
@@ -185,9 +189,9 @@ RSpec.describe Paciente_obeso do
                                 end
                         end
 
-                        result = dll_copy.map{|x| x}
-
-                        expect(result).to eq ( @dll2.map{|x| x}.sort{ |a, b| a.gasto_energetico_total <=> b.gasto_energetico_total})
+                        @result = dll_copy.map{|x| x}
+			}
+                        expect(@result).to eq ( @dll2.map{|x| x}.sort{ |a, b| a.gasto_energetico_total <=> b.gasto_energetico_total})
                 end
 
 
@@ -195,25 +199,26 @@ RSpec.describe Paciente_obeso do
                 it "Con each" do
 
 			                        
-			
+			x.report("each dll"){
 			dll_copy = @dll2.map{|x| x}
 
                         dll_copy.each_index{   |x| dll_copy.each_index{ |y| dll_copy[x],dll_copy[y] = dll_copy[y],dll_copy[x] if dll_copy[x].gasto_energetico_total < dll_copy[y].gasto_energetico_total}}
 
-			result = dll_copy
-                        expect(result).to eq ( @dll2.map{|x| x}.sort{ |a, b| a.gasto_energetico_total <=> b.gasto_energetico_total})
+			@result = dll_copy
+			}
+                        expect(@result).to eq ( @dll2.map{|x| x}.sort{ |a, b| a.gasto_energetico_total <=> b.gasto_energetico_total})
 
                 end
 
 
 		
 	        it "Con sort" do
-
-
-                        result = @dll2.map{|x| x}.sort{ |a, b| a.gasto_energetico_total <=> b.gasto_energetico_total}
-
-			for i in 0..result.size-2
-                        	expect(result[i].gasto_energetico_total).to be <= (result[i+1].gasto_energetico_total)
+		
+			x.report("sort dll"){
+                        @result = @dll2.map{|x| x}.sort{ |a, b| a.gasto_energetico_total <=> b.gasto_energetico_total}
+			}
+			for i in 0..@result.size-2
+                        	expect(@result[i].gasto_energetico_total).to be <= (@result[i+1].gasto_energetico_total)
 			end
 
                 end
@@ -221,5 +226,5 @@ RSpec.describe Paciente_obeso do
 
 	end
 
-
+	end
 end

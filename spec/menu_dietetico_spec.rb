@@ -165,15 +165,15 @@ RSpec.describe Menu_dietetico do
         	end
 
 	end
-
-	        describe "#Ordenaciones del  array" do
-
-
+	describe "#Ordenaciones del  array" do
+		Benchmark.bm do |x|
 
                 it "Con bucle for" do
+
+
+			x.report("for arr:"){
+
                         arr_copy = @arr_menus.dup
-
-
 
                         for i in 1..arr_copy.size
                                 for j in 0..arr_copy.size-1-i
@@ -185,23 +185,26 @@ RSpec.describe Menu_dietetico do
                                 end
                         end
 
-                        result = arr_copy
+                        @result = arr_copy
 
-                        expect(result).to eq ( @arr_menus.sort{ |a, b| a.valor_energetico <=> b.valor_energetico})
+			}
+
+                        expect(@result).to eq ( @arr_menus.sort{ |a, b| a.valor_energetico <=> b.valor_energetico})
                 end
 
 
 
                 it "Con each" do
 
-
-
+	
+			x.report("each arr:") {
                         arr_copy = @arr_menus.dup
 
                         arr_copy.each_index{ |x| arr_copy.each_index{ |y| arr_copy[x],dll_copy[y] = arr_copy[y],dll_copy[x] if arr_copy[x].valor_energetico < arr_copy[y].valor_energetico}}
 
-                        result = arr_copy
-                        expect(result).to eq ( @arr_menus.sort{ |a, b| a.valor_energetico <=> b.valor_energetico})
+                        @result = arr_copy
+			}
+                        expect(@result).to eq ( @arr_menus.sort{ |a, b| a.valor_energetico <=> b.valor_energetico})
 
                 end
 
@@ -209,16 +212,17 @@ RSpec.describe Menu_dietetico do
 
                 it "Con sort" do
 
+			x.report("sort arr:"){
+                        @result = @arr_menus.map{|x| x}.sort{ |a, b| a.valor_energetico <=> b.valor_energetico}
+			}
 
-                        result = @arr_menus.map{|x| x}.sort{ |a, b| a.valor_energetico <=> b.valor_energetico}
-
-                        for i in 0..result.size-2
-                                expect(result[i].valor_energetico).to be <= (result[i+1].valor_energetico)
+                        for i in 0..@result.size-2
+                                expect(@result[i].valor_energetico).to be <= (@result[i+1].valor_energetico)
                         end
 
                 end
 
 
         end
-
+	end
 end
