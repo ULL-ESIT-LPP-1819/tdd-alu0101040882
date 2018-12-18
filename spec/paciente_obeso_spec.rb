@@ -204,7 +204,22 @@ RSpec.describe Paciente_obeso do
                         expect(result).to eq ( @dll2.map{|x| x}.sort{ |a, b| a.gasto_energetico_total <=> b.gasto_energetico_total})
 
                 end
-	
+
+
+		
+	        it "Con sort" do
+
+
+
+                        result = @dll2.map{|x| x}.sort{ |a, b| a.gasto_energetico_total <=> b.gasto_energetico_total}
+
+			for i in 0..result.size-2
+                        	expect(result[i].gasto_energetico_total).to be <= (result[i+1].gasto_energetico_total)
+			end
+
+                end
+
+
 	end
 
 
