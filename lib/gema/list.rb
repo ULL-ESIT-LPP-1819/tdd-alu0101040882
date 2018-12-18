@@ -3,7 +3,7 @@ class Dll
 	include Enumerable
 	attr_accessor :head, :tail, :size
 
-	Node = Struct.new(:value, :next, :prev)
+	Node = Struct.new( :value, :next, :prev)
 	
 	def initialize
 		@head = nil

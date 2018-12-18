@@ -11,6 +11,7 @@ class Menu_dietetico
 		@alimentos.insert_tail(alimento)
 	end
 
+
 	#Verifica que el menu cumpla con las necesidades energeticas de la persona
 	def verificacion_menu
 
