@@ -1,5 +1,9 @@
+require "coveralls"
+Coveralls.wear!
+
 require "bundler/setup"
 require "gema"
+
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
