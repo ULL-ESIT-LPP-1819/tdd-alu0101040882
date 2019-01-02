@@ -3,9 +3,10 @@ class Etiqueta_nut
 
 include Comparable
 	
-attr_reader :kj, :kcal, :nombre, :grasas, :grasas_s, :hidratos, :azucares, :proteinas, :sal, :grasas_mon, :grasas_pol, :polialcoholes, :almidon, :fibra, :vitaminas, :minerales
+attr_reader :kj, :kcal, :nombre, :grasas, :grasas_s, :hidratos, :azucares, :proteinas, :sal, :grasas_mon, :grasas_pol, :polialcoholes, :almidon, :fibra, :vitaminas, :minerales, :n_porciones, :tamaño
 
-	def initialize(nombre,grasas,grasas_s,hidratos,azucares,proteinas,sal,grasas_mon,grasas_pol,polialcoholes,almidon,fibra,vitaminas,minerales)
+
+	def initialize(nombre = 0,grasas = 0, grasas_s = 0,hidratos = 0,azucares = 0,proteinas = 0,sal = 0,grasas_mon = 0,grasas_pol = 0,polialcoholes = 0,almidon = 0,fibra = 0,vitaminas = 0,minerales = 0)
 		@nombre,@grasas,@grasas_s,@hidratos,@azucares,@proteinas,@sal,@grasas_mon,@grasas_pol,@polialcoholes,@almidon,@fibra,@vitaminas,@minerales = nombre,grasas,grasas_s,hidratos,azucares,proteinas,sal,grasas_mon,grasas_pol,polialcoholes,almidon,fibra,vitaminas,minerales
 	end
 
