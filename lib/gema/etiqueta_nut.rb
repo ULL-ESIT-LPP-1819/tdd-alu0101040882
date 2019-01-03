@@ -6,7 +6,7 @@ include Comparable
 attr_reader :kj, :kcal, :nombre, :grasas, :grasas_s, :hidratos, :azucares, :proteinas, :sal, :grasas_mon, :grasas_pol, :polialcoholes, :almidon, :fibra, :vitaminas, :minerales, :n_porciones, :tamaño
 
 
-	def initialize(nombre = 0,grasas = 0, grasas_s = 0,hidratos = 0,azucares = 0,proteinas = 0,sal = 0,grasas_mon = 0,grasas_pol = 0,polialcoholes = 0,almidon = 0,fibra = 0,vitaminas = 0,minerales = 0)
+	def initialize(nombre,grasas,grasas_s,hidratos,azucares,proteinas,sal,grasas_mon,grasas_pol,polialcoholes,almidon,fibra,vitaminas,minerales)
 		@nombre,@grasas,@grasas_s,@hidratos,@azucares,@proteinas,@sal,@grasas_mon,@grasas_pol,@polialcoholes,@almidon,@fibra,@vitaminas,@minerales = nombre,grasas,grasas_s,hidratos,azucares,proteinas,sal,grasas_mon,grasas_pol,polialcoholes,almidon,fibra,vitaminas,minerales
 	end
 
@@ -22,8 +22,14 @@ attr_reader :kj, :kcal, :nombre, :grasas, :grasas_s, :hidratos, :azucares, :prot
 
 	end
 	
-	#Convierte la etiqueta a una cadena
 	def to_s()
+
+"#{@nombre}#{' ' * (24 - @nombre.length)}#{@grasas}\t#{@hidratos}\t\t#{@azucares}\t\t#{@proteinas}\t\t#{@sal}\t#{@polialcoholes}\t\t#{@almidon}\t#{@fibra}\t#{@vitaminas}\t\t#{@minerales}\t\t#{@kcal}\n"
+
+	end
+
+	#Convierte la etiqueta a una cadena
+	def to_s_()
 "Nombre:#{@nombre}\nGrasas:#{@grasas}\nGrasas Saturadas:#{@grasas_s}\nHidratos:#{@hidratos}\nAzúcares:#{@azucares}\nNombre:#{@proteinas}\nSal:#{@sal}\nGrasas Monoinsaturasas:#{@grasas_mon}\nGrasas Polisaturadas:#{@grasas_pol}\nPolialcoholes:#{@polialcoholes}\nAlmidon:#{@almidon}\nFibra:#{@fibra}\nVitaminas:#{@vitaminas}\nMinerales:#{@minerales}\nEnergía (Kj):#{@kj}\nEnergía (Kcal):#{@kcal}\n"	
 	end 
 	
