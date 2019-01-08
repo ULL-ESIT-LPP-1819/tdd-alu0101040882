@@ -24,7 +24,7 @@ attr_reader :kj, :kcal, :nombre, :grasas, :grasas_s, :hidratos, :azucares, :prot
 	
 	def to_s()
 
-"#{@nombre}#{' ' * (24 - @nombre.length)}#{@grasas}\t#{@hidratos}\t\t#{@azucares}\t\t#{@proteinas}\t\t#{@sal}\t#{@polialcoholes}\t\t#{@almidon}\t#{@fibra}\t#{@vitaminas}\t\t#{@minerales}\t\t#{@kcal}\n"
+"#{@nombre}".ljust(24) + "#{@grasas}\t#{@hidratos}\t\t#{@azucares}\t\t#{@proteinas}\t\t#{@sal}\t#{@polialcoholes}\t\t#{@almidon}\t#{@fibra}\t#{@vitaminas}\t\t#{@minerales}\t\t#{@kcal}"
 
 	end
 
